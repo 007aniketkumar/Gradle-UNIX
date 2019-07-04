@@ -1,1 +1,54 @@
+
+Follows the below link :
+
+https://stackoverflow.com/questions/13072111/gits-local-repository-and-remote-repository-confusing-concepts
+
+
 Setting up a Gradle project and commiting it in local GIT repository
+Steps :
+
+To create to a local git project:
+1. mkdir Gradle-Unix
+2. cd Gradle-Unix
+3. git init
+4. vi Readme
+5. git add Readme
+6. git commit -m 'first commit of Readme file'
+
+
+Next step :
+
+To provide Gradle dependencies and provide build and support to run from Linux.
+
+1. ./gradlew build
+2. to build a jar :-
+
+Add the below entry in your build.gradle file.
+
+jar {
+    manifest {
+        attributes('Implementation-Title': project.name,
+                   'Implementation-Version': project.version,
+        			   'Main-Class': 'Runner')
+                   
+    }
+}
+
+Finally to build the jar , call the below command
+
+ ./gradlew jar
+
+4. to run the program 
+
+     java -cp Gradle-Unix-0.0.1.jar com.ani.Main.Runner
+
+5.Run Junits
+     
+   gradle clean test
+
+
+6. Finally optional step : , in case you want to push to your remote repo :
+
+git remote add origin https://github.com/007aniketkumar/Gradle-UNIX.git
+git push -u origin master
+
