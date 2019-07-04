@@ -52,3 +52,11 @@ Finally to build the jar , call the below command
 git remote add origin https://github.com/007aniketkumar/Gradle-UNIX.git
 git push -u origin master
 
+
+7. Useful GIT commands
+
+//to check the GIT commit status 
+
+git log -p -2 //this will give you the diff between current and previous version
+
+git log --stat //this will tell you the stat of each commit 
